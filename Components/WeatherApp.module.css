@@ -1,0 +1,33 @@
+.WeatherContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.WeatherMain{
+    width: 100%;
+    height: 100vh;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.WetaherInfo {
+    width: 100%;
+    height: 100vh;
+}
+
+.title {
+    text-align: center;
+    padding: 20px;
+    font-size: 80px;
+    color: #fff;
+    text-shadow: 1px 1px 2px white;
+}
+
+.title_span {
+    color: #87ceeb;
+    text-shadow: 1px 1px 2px #87ceeb;
+}
+
