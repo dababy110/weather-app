@@ -1,10 +1,22 @@
 import React from "react";
 import WeatherMainInfoStyles from "./WeatherMainInfo.module.css";
 
-const WeatherMainInfo = React.forwardRef(({weather}, ref) => {
-
+const WeatherMainInfo = React.forwardRef(({ weather }, ref) => {
   return (
-    <div ref={ref} className={WeatherMainInfoStyles.mainInfo}>
+    <div ref={ref} className={WeatherMainInfoStyles.mainInfo} id="hide-box">
+      <div className={WeatherMainInfoStyles.mainInfo_button}>
+        <button className={WeatherMainInfoStyles.button}
+        onClick={() => {
+          const removeClass = document.querySelector('#hide-box')
+          removeClass.classList.remove('show-box')
+        }}>
+          <div className={WeatherMainInfoStyles.arrow}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      </div>
       <div className={WeatherMainInfoStyles.country}>
         {weather?.location.country}
       </div>

@@ -1,9 +1,6 @@
 import React, { useState, useRef } from "react";
 import WeatherFormStyles from "./WeatherForm.module.css";
 import WeatherMainInfo from "./WeatherMainInfo";
-import WeatherAppStyles from "./WeatherApp.module.css";
-import Loading from './Loading';
-
 
 function WeatherForm({ onChangeCity, weather }) {
   const [city, setCity] = useState("");
@@ -52,7 +49,6 @@ function WeatherForm({ onChangeCity, weather }) {
         />
       </form>
       <WeatherMainInfo weather={weather} ref={ref} />
-
     </>
   );
 }

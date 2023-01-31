@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 body {
   height: 100vh;
   margin: 0;

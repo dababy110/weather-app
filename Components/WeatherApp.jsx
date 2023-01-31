@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import WeatherForm from "./WeatherForm";
 import WeatherAppStyles from "./WeatherApp.module.css";
-import Loading from './Loading';
 
  function WeatherApp() {
   const [weather, setWeather] = useState(null);
