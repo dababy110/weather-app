@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import WeatherForm from "./WeatherForm";
 import WeatherAppStyles from "./WeatherApp.module.css";
 
- function WeatherApp() {
+function WeatherApp() {
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
@@ -19,7 +19,8 @@ import WeatherAppStyles from "./WeatherApp.module.css";
       const request = await fetch(
         `${import.meta.env.VITE_REACT_APP_URL}&key=${
           import.meta.env.VITE_REACT_APP_KEY
-        }&q=${city}`
+        }&q=${city}`,
+        { referrerPolicy: "unsafe_url" }
       );
 
       const json = await request.json();
@@ -36,7 +37,7 @@ import WeatherAppStyles from "./WeatherApp.module.css";
           Weather <span className={WeatherAppStyles.title_span}>App</span>
         </h1>
         <WeatherForm
-        weather={weather}
+          weather={weather}
           onChangeCity={(city) => {
             setWeather(null);
             loadInfo(city);
@@ -51,6 +52,6 @@ import WeatherAppStyles from "./WeatherApp.module.css";
       </div>
     </main>
   );
-};
+}
 
 export default WeatherApp;
