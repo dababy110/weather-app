@@ -19,8 +19,7 @@ function WeatherApp() {
       const request = await fetch(
         `${import.meta.env.VITE_REACT_APP_URL}&key=${
           import.meta.env.VITE_REACT_APP_KEY
-        }&q=${city}`,
-        { referrerPolicy: "unsafe_url" }
+        }&q=${city}`
       );
 
       const json = await request.json();
